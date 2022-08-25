@@ -40,6 +40,7 @@ const store = useCounterStore() // store 是一个被 reactive 包裹的对象�
 const otherStore = useOtherStore()
 const { doubleCount, getUserById, otherGetter } = storeToRefs(store) // 为了从 Store 中提取属性同时保持其响应式，需要使用storeToRefs()
 
+console.log(import.meta.env);
 // 订阅 store 的 mutation，在组件卸载时自动删除，若要在卸载组件后保留他们，需要配置第二个参数为 { detached: true }
 store.$subscribe((mutation, state) => {
   console.log(mutation, state);
