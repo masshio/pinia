@@ -9,7 +9,7 @@ import { ref } from "vue";
  *   options // 定义存储的选项对象传递给 defineStore()
  * } 
  */
-export function myPiniPlugin(context) {
+export function myPiniaPlugin(context) {
     console.log(context);
     let { store } = context
     store.hello = 'world'
